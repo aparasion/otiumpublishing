@@ -26,6 +26,17 @@
 <a class="book" href="https://a.co/d/010OZ6SV" target="_blank" rel="noopener noreferrer"><div class="cover"><img src="img/mello.jpg" alt="Mello Meerkat: Mello says hello! Cozy coloring book for kids" width="342" height="342"></div><h2><span class="book-title">Mello Meerkat:</span><span class="book-subtitle"> Mello Says Hello!: A Cozy Coloring Book for Kids Ages 4+ Featuring Mello, a Lovable Meerkat Friend</span></h2></a>
 <a class="book" href="https://a.co/d/0e7mF9Jw" target="_blank" rel="noopener noreferrer"><div class="cover"><img src="img/microbes.jpg" alt="Meet the Microbes! A Science Coloring Book for Kids, ages 4 and up" width="1000" height="1000"></div><h2><span class="book-title">Meet the Microbes!:</span><span class="book-subtitle"> A Science Coloring Book for Kids</span></h2></a>
 </section>
+<script>
+(() => {
+  const gallery = document.querySelector('.books');
+  const books = Array.from(gallery.children);
+  for (let i = books.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [books[i], books[j]] = [books[j], books[i]];
+  }
+  gallery.append(...books);
+})();
+</script>
 <footer>Otium Publishing<br><a href="mailto:contact@otiumpublishing.com">contact@otiumpublishing.com</a></footer>
 </main>
 </body>
